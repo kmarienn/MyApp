@@ -12,8 +12,33 @@
         <p>{{persona.nombre}} {{persona.apellido}} | {{persona.email}}</p>
         {% endfor %}
     <br>
+
+    <ul>
+        {% for persona in personas %}
+        <li>{{persona.nombre}} {{persona.apellido}} {{persona.email}}</li>
+        {% endfor %}
+    </ul>
+
     <br>
-    <br>
+
+    <table>
+        <tr>
+            <th>Id</th>
+            <th>NOMBRE</th>
+            <th>APELLIDO</th>
+            <th>MAIL</th>
+        </tr>
+            {% for persona in personas %}
+            <tr>
+                <td>{{persona.id}}</td>
+                <td>{{persona.nombre}}</td>
+                <td>{{persona.apellido}}</td>
+                <td>{{persona.email}}</td>
+            </tr>
+            {% endfor %}
+
+    </table>
+
     <br>
 
         {% for nombre in nombres %}
