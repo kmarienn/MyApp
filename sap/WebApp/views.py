@@ -10,6 +10,7 @@ def bienvenida (request):
     #return HttpResponse ('<!DOCTYPE html><html><head><title></title><body><p>Hola Mundo de Django</p></body></head></html>')
     pagina = loader.get_template('saludo.html')
     return HttpResponse(pagina.render())
+'''
 def hola (request, nombre):
     apellido = request.GET ['apellido']
     nivel = request.GET['nivel']
@@ -36,3 +37,4 @@ def registro(request):
     datos = {'cantidad': cantidad_personas, 'personas':personas, 'nombres': nombres}
     pagina = loader.get_template('personas.html')
     return HttpResponse(pagina.render(datos, request))
+'''
